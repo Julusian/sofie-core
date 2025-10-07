@@ -243,12 +243,13 @@ jobs:
             echo "No NPM token provided, using trusted publishing"
           fi
 
+          corepack enable
+
           # make dependencies of `determine-npm-tag` available
           yarn install --mode=skip-build
 
           cd packages
 
-          corepack enable
           yarn install
 
           NPM_TAG=nightly
