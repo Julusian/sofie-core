@@ -264,7 +264,7 @@ jobs:
 
           NEW_VERSION=$(node -p "require('./lerna.json').version")
           echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
-          echo "**Published:** $NEW_VERSION" >> $GITHUB_STEP_SUMMARY
+          echo "**Published:** $NEW_VERSION as $NPM_TAG" >> $GITHUB_STEP_SUMMARY
         env:
           NPM_CONFIG_PROVENANCE: true
           CI: true
